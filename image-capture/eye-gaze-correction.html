@@ -1,0 +1,26 @@
+---
+feature_name: Image Capture / Control Camera Eye Gaze Correction
+chrome_version: 122
+feature_id: 5140905475964928
+local_css_files: ['background-blur.css']
+check_min_version: true
+index: index.html
+---
+
+<h3>Background</h3>
+<p>The ImageCapture Web API allows web developers to leverage built-in support for 
+    automatic eye gaze correction.</p>
+<p>Note: Eye Gaze Correction is still under development. You must be using Chrome
+with the <code>--enable-blink-features=MediaCaptureCameraControl</code>
+flag enabled.</p>
+
+<video autoplay></video>
+<button disabled>Toggle Eye Gaze Correction</button>
+
+{% include output_helper.html %}
+
+{% include js_snippet.html filename='eye-gaze-correction.js' %}
+
+<script>
+  log = ChromeSamples.log;
+</script>
